@@ -8,7 +8,7 @@ public class HomeController {
 
     public HomeController(){
         this.receiver = new ReceiverImpl();
-        this.sender = new SenderImpl(this.receiver);
+        this.sender = new WirelessSenderImpl(this.receiver);
     }
     @RequestMapping(value = "/")
     public String home(){
